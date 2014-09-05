@@ -1,4 +1,4 @@
- class LessonsController < ActionController::Base
+ class LessonsController < ApplicationController
 
   def index
     lessons = Lesson.all
@@ -12,10 +12,16 @@
   end
 
   def create
-
+    lesson = Lesson.new(params[:lesson])
+    lessons = Lesson.all
+    if lesson.save
+      redirect_to('/lessons/new')
+    else
+    render("new.html.erb")
+    end
   end
 
-  def read
+  def show
 
   end
 
