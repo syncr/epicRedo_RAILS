@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: epicRedo_production
+
+test:
+  adapter: postgresql
+  database: epicRedo_test
