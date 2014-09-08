@@ -27,11 +27,21 @@
     render("lessons/show.html.erb")
   end
 
-  def update
-
+  def edit
+    @lesson = Lesson.find(params[:id])
+    render("lessons/edit.html.erb")
   end
 
-  def delete
+  def update
+    @lesson = Lesson.find(params[:id])
+    if @lesson.update(params[:lesson])
+      render('lessons/list.html.erb')
+    else
+      render('lessons/edit.html.erb')
+    end
+  end
+
+  def destroy
 
   end
 

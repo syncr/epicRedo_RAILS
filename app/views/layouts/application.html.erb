@@ -33,7 +33,6 @@
     <div class="page-header">
       <div class="jumbotron">
         <h1>Learn How To Program</h1>
-        <!-- <img src = 'http://shechive.files.wordpress.com/2014/04/post-25179-you-can-do-it-gif-serious-rob-rnbk.gif' alt='waterboy cajun guy'></img> -->
       </div>
     </div>
   </div>
@@ -45,8 +44,8 @@
       <div class="alert alert-success" role="alert">
         <%= flash[:notice] %>
       </div>
-    <% elsif flash[:notice] == "Updated Successfully." %>
-      <div class="alert alert-info" role="alert">
+    <% elsif flash[:notice] == "Your lesson has been updated." %>
+      <div class="alert alert-success" role="alert">
         <%= flash[:notice] %>
       </div>
     <% elsif flash[:notice] == "Removed Successfully." %>
