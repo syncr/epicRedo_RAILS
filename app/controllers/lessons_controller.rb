@@ -33,16 +33,24 @@
   end
 
   def update
+    @lessons = Lesson.all
     @lesson = Lesson.find(params[:id])
     if @lesson.update(params[:lesson])
-      render('lessons/list.html.erb')
+      flash[:notice] = "Your lesson has been updated."
+      render('lessons/index.html.erb')
     else
       render('lessons/edit.html.erb')
     end
   end
 
   def destroy
+    @lessons = Lesson.all
+    @lesson = Lesson.find(params[:id]).destroy
+    flash[:notice] = "Your lesson has been deleted."
+    render('lessons/index.html.erb')
+  end
 
+  def next
   end
 
 end

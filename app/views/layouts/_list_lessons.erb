@@ -1,8 +1,11 @@
 <div class = "list">
   <h3>Select a lesson:</h3>
-  <div class = "list clearfix center-block">
+    <ul class = "list clearfix center-block">
     <% @lessons.each do |lesson| %>
-     <li><a href="/lessons/<%= lesson.id %>"><%= lesson.name %></a></li>
+       <li><%= lesson.number %>
+        <a href="/lessons/<%= lesson.id %>" class ="list_item">
+          <%= lesson.name %></a></li>
     <% end %>
-  </div>
+  </ul>
+
 </div>

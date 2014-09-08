@@ -18,4 +18,9 @@
   <label for="lesson_number">Lesson number</label>
   <input id="lesson_number" name="lesson[number]" type="number" value="<%= @lesson.number %>">
   <button class='btn btn-primary'>Update Lesson</button>
+
 </form>
+  <a href='/lessons/<%= @lesson.id %>'
+    data-confirm="Are you sure?"
+    data-method="delete"
+    rel='nofollow'>Delete</a>
