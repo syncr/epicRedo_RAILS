@@ -15,6 +15,7 @@
     lesson = Lesson.new(params[:lesson])
     lessons = Lesson.all
     if lesson.save
+      flash[:notice] = "Your lesson has been created."
       redirect_to('/lessons/new')
     else
     render("new.html.erb")
@@ -22,7 +23,8 @@
   end
 
   def show
-
+    lesson = Lesson.find(params[:id])
+    render("lessons/show.html.erb")
   end
 
   def update
