@@ -1,0 +1,37 @@
+<h2>Edit this lesson:</h2>
+
+<% if @lesson.errors.any? %>
+  <div class="alert alert-warning" role="alert">
+  <h5>There was an error with your submission.</h5>
+    <% @lesson.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </div>
+<% end %>
+
+<form action="/lessons/<%= @lesson.id %>" method="post" class='form-horizontal'>
+  <fieldset>
+    <div class="control-group ">
+      <input name="_method" type="hidden" value="patch" class ='row'>
+
+        <div class = "control-group">
+          <label for="lesson_name">Name</label>
+          <input id="lesson_name" name="lesson[name]" type="text" value="<%= @lesson.name %>">
+        </div>
+        <div class = "control-group">
+          <label for="lesson_description">Description</label>
+          <textarea id="lesson_description" name="lesson[description]" type="text" value = "<%= @lesson.description %>"></textarea>
+        </div>
+        <div class = "control-group">
+          <label for="lesson_number">Lesson number</label>
+          <input id="lesson_number" name="lesson[number]" type="number" value="<%= @lesson.number %>">
+        </div>
+      <button class='btn btn-primary'>Update Lesson</button>
+    </div>
+  </fieldset>
+</form>
+
+<a href='/lessons/<%= @lesson.id %>'
+    data-confirm="Are you sure?"
+    data-method="delete"
+    rel='nofollow'>Delete</a>

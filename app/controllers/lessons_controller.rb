@@ -16,7 +16,7 @@
     @lessons = Lesson.all
     if @lesson.save
       flash[:notice] = "Your lesson has been created."
-      redirect_to('/lessons/new')
+      redirect_to("/lessons/new")
     else
     render("new.html.erb")
     end
@@ -37,9 +37,9 @@
     @lesson = Lesson.find(params[:id])
     if @lesson.update(params[:lesson])
       flash[:notice] = "Your lesson has been updated."
-      render('lessons/index.html.erb')
+      redirect_to("/lessons/#{@lesson.id}")
     else
-      render('lessons/edit.html.erb')
+      render("lessons/edit.html.erb")
     end
   end
 
@@ -47,10 +47,6 @@
     @lessons = Lesson.all
     @lesson = Lesson.find(params[:id]).destroy
     flash[:notice] = "Your lesson has been deleted."
-    render('lessons/index.html.erb')
+    redirect_to("/lessons/")
   end
-
-  def next
-  end
-
 end

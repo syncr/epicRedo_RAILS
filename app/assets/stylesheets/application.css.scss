@@ -16,10 +16,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.external_container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 .jumbotron {
   background: #556270;
   color: #e9e9e9;
 
+}
+
+body {
+  background: #ddd;
 }
 
 h1 {
@@ -29,6 +41,11 @@ h1 {
 
 ul {
   list-style-type: none;
+}
+
+.row {
+  margin: 0 auto;
+  padding: 0 auto;
 }
 
 .list ul li {
@@ -44,5 +61,43 @@ ul {
 
 .alert {
   margin-top: 10px;
+}
+
+.centered {
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+#footer {
+  display: block;
+  height: 50px;
+  background: lightblue;
+  bottom: 0px;
+}
+
+.navbar-inverse a {
+  color: #e9e9e9;
+}
+
+
+#lesson_description  {
+  color: #333;
+  width: 30%;
+  height: 7em;
+  padding-bottom: 10px;
+}
+
+.form label{
+  display:block;
+  font-weight:bold;
+  width: 30%;
+
+}
+
+.form input{
+  width: 30%;
+  display: block;
+  border:solid 1px #aacfe4;
+  margin:0 0 20px 0;
 }
 

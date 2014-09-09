@@ -9,18 +9,15 @@
   </div>
 <% end %>
 
-<form action="/lessons/<%= @lesson.id %>" method="post">
-  <input name="_method" type="hidden" value="patch">
-  <label for="lesson_name">Name</label>
-  <input id="lesson_name" name="lesson[name]" type="text" value="<%= @lesson.name %>">
-  <label for="lesson_description">Description</label>
-  <input id="lesson_description" name="lesson[description]" type="text" value = "<%= @lesson.description %>">
-  <label for="lesson_number">Lesson number</label>
-  <input id="lesson_number" name="lesson[number]" type="number" value="<%= @lesson.number %>">
-  <button class='btn btn-primary'>Update Lesson</button>
+<div class = 'row centered'
+  <form action="/lessons/<%= @lesson.id %>" method="post" class='form-horizontal'>
 
-</form>
-  <a href='/lessons/<%= @lesson.id %>'
+    <%= render('lesson_form') %>
+    <button class = 'btn btn-primary'>Update Lesson</button>
+
+  </form>
+</div>
+<a href='/lessons/<%= @lesson.id %>'
     data-confirm="Are you sure?"
     data-method="delete"
     rel='nofollow'>Delete</a>

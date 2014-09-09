@@ -5,6 +5,7 @@ class Lesson < ActiveRecord::Base
   validates :number, numericality: { only_integer: true }
 
   default_scope { order(number: :asc) }
+  belongs_to :section
 
 
   def next

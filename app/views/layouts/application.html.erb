@@ -7,8 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
+  <div class="external_container">
+  <div class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
@@ -28,16 +28,14 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="page-header">
-      <div class="jumbotron">
-        <h1>Learn How To Program</h1>
-      </div>
+  <div class="page-header">
+    <div class="jumbotron">
+      <h1>Learn How To Program</h1>
     </div>
   </div>
 
 
-  <section class ='container'>
+  <section class ='row'>
     <%= yield %>
     <% if flash[:notice] == "Your lesson has been created."%>
       <div class="alert alert-success" role="alert">
@@ -53,8 +51,5 @@
       </div>
     <% end %>
   </section>
-
-
-
   </body>
 </html>
