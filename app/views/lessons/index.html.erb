@@ -5,17 +5,16 @@
 <ul>
   <% @sections.each do |section| %>
     <li>
-      <a href="sections/<%= section.id %>"><%= section.name %></a><br>
+      <a href="../sections/<%= section.id %>"><%= section.name %></a><br>
         <ul>
           <% section.lessons.each do |lesson| %>
           <li id="lesson_names">
-            <a href="lessons/<%= lesson.id %>"><%= lesson.name %></a>
+            <a href="../lessons/<%= lesson.id %>"><%= lesson.name %></a>
           </li>
           <% end %>
         </ul>
     </li>
   <% end %>
 </ul>
-
 
 </div>

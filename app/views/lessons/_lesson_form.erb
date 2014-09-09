@@ -8,6 +8,18 @@
       <label for="lesson_description">Description</label>
       <textarea id="lesson_description" name="lesson[description]" type="text" value = "<%= @lesson.description %>"><%= @lesson.description %></textarea>
     </div>
+
+    <div class="control-group">
+      <%if Lesson.all.any? %>
+      <label for="lesson_section">Section:</label>
+        <select name="lesson[section_id]" id="section">
+          <% Section.all.each do |section| %>
+            <option value="<%= section.id %>"><%= section.name %></option>
+          <% end %>
+        </select>
+      <% end %>
+    </div>
+
     <div class = "control-group">
       <label for="lesson_number">Lesson number</label>
       <input id="lesson_number" name="lesson[number]" type="number" value="<%= @lesson.number %>">
