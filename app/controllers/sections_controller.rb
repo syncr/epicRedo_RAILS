@@ -18,7 +18,7 @@
       flash[:notice] = "Your section has been created."
       redirect_to('/sections/new')
     else
-    render("new.html.erb")
+    render("/sections/new.html.erb")
     end
   end
 
@@ -28,7 +28,7 @@
   end
 
   def edit
-    @lesson = Section.find(params[:id])
+    @section = Section.find(params[:id])
     render("sections/edit.html.erb")
   end
 

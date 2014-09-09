@@ -18,11 +18,22 @@
         </button>
         <a class="navbar-brand" href="#">Learn How To Program</a>
       </div>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="/lessons/">Lessons</a></li>
-          <li><a href="/lessons/new">Create</a></li>
-          <li><a href="/sections/">Sections</a></li>
+      <div class="collapse navbar-collapse right-padding">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lessons <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/lessons/">View All</a></li>
+              <li><a href="/lessons/new">Create</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/sections/">View All</a></li>
+              <li><a href="/sections/new">Create</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -34,22 +45,36 @@
     </div>
   </div>
 
-
-  <section class ='row'>
-    <%= yield %>
-    <% if flash[:notice] == "Your lesson has been created."%>
-      <div class="alert alert-success" role="alert">
-        <%= flash[:notice] %>
-      </div>
-    <% elsif flash[:notice] == "Your lesson has been updated." %>
-      <div class="alert alert-success" role="alert">
-        <%= flash[:notice] %>
-      </div>
-    <% elsif flash[:notice] == "Removed Successfully." %>
-      <div class="alert alert-info" role="alert">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
-  </section>
+  <div class = 'container-fluid'>
+    <div class ='row'>
+      <%= yield %>
+      <% if flash[:notice] == "Your lesson has been created."%>
+        <div class="alert alert-success" role="alert">
+          <%= flash[:notice] %>
+        </div>
+      <% elsif flash[:notice] == "Your lesson has been updated." %>
+        <div class="alert alert-success" role="alert">
+          <%= flash[:notice] %>
+        </div>
+      <% elsif flash[:notice] == "Your lesson has been deleted." %>
+        <div class="alert alert-success" role="alert">
+          <%= flash[:notice] %>
+        </div>
+      <% elsif flash[:notice] == "Your section has been created." %>
+        <div class="alert alert-success" role="alert">
+          <%= flash[:notice] %>
+        </div>
+      <% elsif flash[:notice] == "Your section has been updated." %>
+        <div class="alert alert-success" role="alert">
+          <%= flash[:notice] %>
+        </div>
+      <% elsif flash[:notice] == "Your section has been deleted." %>
+        <div class="alert alert-success" role="alert">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+      
+    </div>
+  </div>
   </body>
 </html>

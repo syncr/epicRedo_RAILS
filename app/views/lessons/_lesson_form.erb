@@ -1,19 +1,17 @@
 <fieldset>
   <div class="control-group form ">
-    <input name="_method" type="hidden" value="patch" class ='row'>
-
-      <div class = "control-group">
-        <label for="lesson_name">Name</label>
-        <input id="lesson_name" name="lesson[name]" type="text" value="<%= @lesson.name %>">
-      </div>
-      <div class = "control-group">
-        <label for="lesson_description">Description</label>
-        <textarea id="lesson_description" name="lesson[description]" type="text" value = "<%= @lesson.description %>"></textarea>
-      </div>
-      <div class = "control-group">
-        <label for="lesson_number">Lesson number</label>
-        <input id="lesson_number" name="lesson[number]" type="number" value="<%= @lesson.number %>">
-      </div>
+    <div class = "control-group">
+      <label for="lesson_name">Name</label>
+      <input id="lesson_name" name="lesson[name]" type="text" value="<%= @lesson.name %>">
+    </div>
+    <div class = "control-group">
+      <label for="lesson_description">Description</label>
+      <textarea id="lesson_description" name="lesson[description]" type="text" value = "<%= @lesson.description %>"><%= @lesson.description %></textarea>
+    </div>
+    <div class = "control-group">
+      <label for="lesson_number">Lesson number</label>
+      <input id="lesson_number" name="lesson[number]" type="number" value="<%= @lesson.number %>">
+    </div>
   </div>
 </fieldset>
 

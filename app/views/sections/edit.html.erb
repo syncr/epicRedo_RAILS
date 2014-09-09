@@ -1,37 +1,17 @@
-<h2>Edit this lesson:</h2>
+<h2>Edit this section:</h2>
+<%= render('layouts/errors', :object => @section) %>
 
-<% if @lesson.errors.any? %>
-  <div class="alert alert-warning" role="alert">
-  <h5>There was an error with your submission.</h5>
-    <% @lesson.errors.full_messages.each do |error| %>
-      <li><%= error %></li>
-    <% end %>
-  </div>
-<% end %>
+<div class = 'col-md-6 col-md-offset-3'>
+    <form action="/sections/<%= @section.id %>" method="post" class='form-horizontal'>
+      <input name="_method" type="hidden" value="patch"> 
 
-<form action="/lessons/<%= @lesson.id %>" method="post" class='form-horizontal'>
-  <fieldset>
-    <div class="control-group ">
-      <input name="_method" type="hidden" value="patch" class ='row'>
+        <%= render('section_form') %>
+        <button class = 'btn btn-primary'>Update Section</button>
+        <a href='/sections/<%= @section.id %>'
+        data-confirm="Are you sure?"
+        data-method="delete"
+        rel='nofollow'><button class='btn btn-danger'>Delete Section</button></a>
+    </form>
+</div>
 
-        <div class = "control-group">
-          <label for="lesson_name">Name</label>
-          <input id="lesson_name" name="lesson[name]" type="text" value="<%= @lesson.name %>">
-        </div>
-        <div class = "control-group">
-          <label for="lesson_description">Description</label>
-          <textarea id="lesson_description" name="lesson[description]" type="text" value = "<%= @lesson.description %>"></textarea>
-        </div>
-        <div class = "control-group">
-          <label for="lesson_number">Lesson number</label>
-          <input id="lesson_number" name="lesson[number]" type="number" value="<%= @lesson.number %>">
-        </div>
-      <button class='btn btn-primary'>Update Lesson</button>
-    </div>
-  </fieldset>
-</form>
 
-<a href='/lessons/<%= @lesson.id %>'
-    data-confirm="Are you sure?"
-    data-method="delete"
-    rel='nofollow'>Delete</a>

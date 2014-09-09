@@ -1,0 +1,8 @@
+<% if object.errors.any?%>
+  <div class="alert alert-warning" role="alert">
+  <h5>There was an error with your submission.</h5>
+    <% object.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </div>
+<% end %>

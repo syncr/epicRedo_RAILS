@@ -1,6 +1,7 @@
  class LessonsController < ApplicationController
 
   def index
+    @sections = Section.all
     @lessons = Lesson.all
     render("lessons/index.html.erb")
   end
@@ -18,7 +19,7 @@
       flash[:notice] = "Your lesson has been created."
       redirect_to("/lessons/new")
     else
-    render("new.html.erb")
+    render("/lessons/new.html.erb")
     end
   end
 

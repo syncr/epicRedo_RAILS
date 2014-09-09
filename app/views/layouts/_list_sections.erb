@@ -2,9 +2,8 @@
   <h3>Select a section:</h3>
     <ul class = "list clearfix center-block">
     <% @sections.each do |section| %>
-       <li><%= section.number %>
-        <a href="/sections/<%= section.id %>" class ="list_item">
-          <%= section.name %></a></li>
+       <li><a href="/sections/<%= section.id %>" class ="list_item">
+       <%= section.name %></a></li>
     <% end %>
   </ul>
 

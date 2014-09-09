@@ -1,23 +1,23 @@
 <h2>Edit this lesson:</h2>
 
-<% if @lesson.errors.any? %>
-  <div class="alert alert-warning" role="alert">
-  <h5>There was an error with your submission.</h5>
-    <% @lesson.errors.full_messages.each do |error| %>
-      <li><%= error %></li>
-    <% end %>
-  </div>
-<% end %>
+<%= render('layouts/errors', :object => @lesson) %>
 
-<div class = 'row centered'
+<div class = 'col-md-6 col-md-offset-3'>
   <form action="/lessons/<%= @lesson.id %>" method="post" class='form-horizontal'>
+    <input name="_method" type="hidden" value="patch">
 
     <%= render('lesson_form') %>
     <button class = 'btn btn-primary'>Update Lesson</button>
 
+    <a href='/lessons/<%= @lesson.id %>'
+        data-confirm="Are you sure?"
+        data-method="delete"
+        rel='nofollow'><button class='btn btn-danger'>Delete</button></a>
   </form>
+  
+  <form action="/lessons/<%= @lesson.id %>" method="post" class='form-horizontal'>
+
+
 </div>
-<a href='/lessons/<%= @lesson.id %>'
-    data-confirm="Are you sure?"
-    data-method="delete"
-    rel='nofollow'>Delete</a>
+
+
