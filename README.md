@@ -1,31 +1,35 @@
+=Recreating the Learnhowtoprogram.com website using Rails
 
-WIP project and README
-======================
+Site development utilizing minimal Rails magic. 
+Site is live on Heroku @ http://learn-how-to-program.herokuapp.com/
 
+Function: 
+Allows an instructor to create individual lessons and link them to into sorted sections. The instructor can add/edit/delete lessons and sections as needed.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Utilizes Bootstrap for basic responsiveness. Some styling is still in-progress as additional media queries are required to manage some page objects.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+---
+Date 9/09/2014
+  Lesson - Index, New, Create, Show, Edit, Update, Destroy actions
+  Section - Index, New, Create, Show, Edit, Update, Destroy actions
+
+---
+* This project utilizes bundle gem to manage dependencies.
+* This was completed on ruby v2.0, rails 4.1.5
+* Database utilized: PostgreSQL
+* Database schema: 
+
+    create_table "lessons", force: true do |t|
+        t.string  "name"
+        t.text    "description"
+        t.integer "number"
+        t.integer "section_id"
+    end
+
+  create_table "sections", force: true do |t|
+        t.string  "name"
+        t.integer "number"
+    end
+
+* Testing utilizes rails helper and rspec 3.0 for Test Driven Development
