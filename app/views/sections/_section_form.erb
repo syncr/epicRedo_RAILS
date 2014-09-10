@@ -1,10 +1,16 @@
 <fieldset>
   <div class="control-group form ">
 
-      <div class = "control-group">
-        <label for="section_name">Name</label>
-        <input id="section_name" name="section[name]" type="text" value="<%= @section.name %>">
-      </div>
+    <div class = "control-group">
+      <label for="section_name">Name</label>
+      <input id="section_name" name="section[name]" type="text" value="<%= @section.name %>">
+    </div>
+
+    <div class = "control-group">
+      <label for="section_number">Section number</label>
+      <input id="section_number" name="section[number]" type="number" value="<%= @section.number %>">
+    </div>
+
   </div>
 </fieldset>
 
