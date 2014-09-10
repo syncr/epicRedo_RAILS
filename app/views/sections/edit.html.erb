@@ -1,13 +1,13 @@
 <h2>Edit this section:</h2>
-<%= render('layouts/errors', :object => @section) %>
+<%= render("layouts/errors", :object => @section) %>
 
 <div class = 'col-md-6 col-md-offset-3'>
     <form action="/sections/<%= @section.id %>" method="post" class='form-horizontal'>
       <input name="_method" type="hidden" value="patch"> 
 
-        <%= render('section_form') %>
+        <%= render("sections_form") %>
         <button class = 'btn btn-primary'>Update Section</button>
-        <a href='/sections/<%= @section.id %>'
+        <a href="/sections/<%= @section.id %>"
         data-confirm="Are you sure?"
         data-method="delete"
         rel='nofollow'><button class='btn btn-danger'>Delete Section</button></a>

@@ -1,0 +1,16 @@
+<div class = "list">
+  <ol>
+    <% @sections.each do |section| %>
+      <li>
+        <a href="../sections/<%= section.id %>"> <%= section.name %></a><br>
+        <ul>
+          <% section.lessons.each do |lesson| %>
+          <span id="lesson_names">
+            <a href="../lessons/<%= lesson.id %>"><%= lesson.name %></a>
+          </span>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>
+  </ol>
+</div>

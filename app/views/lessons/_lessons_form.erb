@@ -9,10 +9,10 @@
       <textarea id="lesson_description" name="lesson[description]" type="text" value = "<%= @lesson.description %>"><%= @lesson.description %></textarea>
     </div>
 
-    <div class="control-group">
+    <div class="control-group form-group">
       <%if Lesson.all.any? %>
       <label for="lesson_section">Section:</label>
-        <select name="lesson[section_id]" id="section">
+        <select name="lesson[section_id]" class = 'form-control' id="section">
           <% Section.all.each do |section| %>
             <option value="<%= section.id %>"><%= section.name %></option>
           <% end %>

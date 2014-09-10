@@ -16,7 +16,7 @@
     @sections = Section.all
     if @section.save
       flash[:notice] = "Your section has been created."
-      redirect_to('/sections/new')
+      redirect_to("/sections/new")
     else
     render("/sections/new.html.erb")
     end
@@ -47,6 +47,6 @@
     @sections = Section.all
     @section = Section.find(params[:id]).destroy
     flash[:notice] = "Your section has been deleted."
-    redirect_to('/sections/')
+    redirect_to("/sections/")
   end
 end

@@ -1,0 +1,7 @@
+<ul class = "list">
+<% @sections.each do |section| %>
+   <li><a href="/sections/<%= section.id %>" class ="list_item">
+   <%= section.name %></a></li>
+<% end %>
+</ul>
+

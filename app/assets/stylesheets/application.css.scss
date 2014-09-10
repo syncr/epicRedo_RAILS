@@ -30,6 +30,10 @@ ul {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .row {
   margin: 0 auto;
   padding: 0 auto;
@@ -77,10 +81,26 @@ ul {
   text-decoration: none;
 }
 
-.list_item {
-  padding-left:10px;
-  background: #eee;
-  display: inline-block;
+.list {
+  background: #e9e9e9;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.list ol, .list ul {
+  color:#333;
+  background: #e1e1e1;
+}
+
+.list li {
+  font-size: 1.3em;
+  line-height: 2em;
+  background: #e1e1e1;
+  padding-left:1em;
+}
+
+.list a:hover {
+  color: #af7fcc;
 }
 
 .alert {
@@ -99,7 +119,7 @@ ul {
 }
 
 #lesson_description  {
-  color: #333;
+  border-color:#bbb;
   width: 100%;
   height: 7em;
   padding-bottom: 10px;
@@ -114,12 +134,12 @@ ul {
 .form input{
   width: 100%;
   display: block;
-  border:solid 1px #aacfe4;
+
   margin:0 0 20px 0;
 }
 
 .center {
-  margin:5px 0 20px 20px;
+  margin:-35px 0 80px 20px;
 }
 
 .circle {
