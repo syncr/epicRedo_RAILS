@@ -12,17 +12,16 @@
 
 
   <div id="footer" class = 'navbar-fixed-bottom'>
-      <div class = 'row col-xs-sm-12'>
-      <% if @lesson.prev != nil %>
-          <a class='nav-button' id='prev' href="/lessons/<%= @lesson.prev.id %>">Previous</a>
+      <div class = 'col-xs-sm-12'>
+      <div id = 'footer-button-block'>
+        <% if @lesson.prev != nil %>
+            <a class='footer-button' id='prev' href="/lessons/<%= @lesson.prev.id %>">Previous</a>
+        <% end %>
 
-      <% end %>
+        <% if @lesson.next != nil %>
+          <a class='footer-button' id='next' href="/lessons/<%= @lesson.next.id %>">Next</a>
+        <% end %>
       </div>
-
-      <% if @lesson.next != nil %>
-        <a class='nav-button' id='next' href="/lessons/<%= @lesson.next.id %>">Next</a>
-
-      <% end %>
     </div>
   </div>
 </div>

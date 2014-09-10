@@ -17,32 +17,8 @@
 @import "bootstrap";
 
 body {
-  font-family: 'Roboto', sans-serif;
-}
-
-
-
-.nav {
-  font-size: 1.3em;
-  height: 3em;
-
-}
-
-.jumbotron {
-  background: #7fc3cc;
-  color: #fff;
-}
-
-.top-margin {
-  margin-top:35px;
-}
-
-.right-padding {
-  margin-right: 20px;
-}
-
-body {
   background: #ddd;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -59,32 +35,52 @@ ul {
   padding: 0 auto;
 }
 
-.nav-button {
+.jumbotron {
+  background: #7fc3cc;
+  color: #fff;
+}
+
+.top-margin {
+  margin-top:35px;
+}
+
+.right-padding {
+  margin-right: 20px;
+}
+
+.nav {
+  font-size: 1.3em;
+  height: 3em;
+}
+
+#footer-button-block {
+  margin-left: 29px;
+}
+
+.footer-button {
   border: .1em solid white;
   border-radius: 3px;
   padding: 4px 8px;
-  margin: 9px 0 0 29px;
+  margin: 11px 4px 0 0;
   float: left;
   color: white !important;
-
 }
 
-.nav-button a {
+
+.footer-button a {
   text-decoration: none;
 }
 
-.nav-button:hover {
+.footer-button:hover {
   color: #eee;
   background: #af7fcc;
   text-decoration: none;
-
 }
 
 .list_item {
   padding-left:10px;
   background: #eee;
   display: inline-block;
-
 }
 
 .alert {
@@ -102,7 +98,6 @@ ul {
   color: #e9e9e9;
 }
 
-
 #lesson_description  {
   color: #333;
   width: 100%;
@@ -114,7 +109,6 @@ ul {
   display:block;
   font-weight:bold;
   width: 100%;
-
 }
 
 .form input{
@@ -126,7 +120,6 @@ ul {
 
 .center {
   margin:5px 0 20px 20px;
-
 }
 
 .circle {
