@@ -1,14 +1,14 @@
 
-Rewriting website with Rails
+Rewriting a website with Rails
 ====================================
 Site development utilizing minimal Rails magic. 
 
 Live on Heroku @ http://learn-how-to-program.herokuapp.com/
 
 Function: 
-Allows an instructor to create individual lessons and link them to into sorted sections. The instructor can add/edit/delete lessons and sections as needed.
+Allows an instructor to create individual lessons and link them to sorted sections. The instructor can add/edit/delete lessons and sections as needed.
 
-Utilizes Bootstrap for basic responsiveness. Custom styling has been applied and some additional media queries are in-progress to manage some objects.
+Utilizes Bootstrap for basic responsiveness. Custom styling has been applied and some additional media queries are in-progress to manage some behaviors for smaller viewports.
 
 
 ---
