@@ -2,7 +2,6 @@
   <h2>Edit this lesson:</h2>
   <%= render('layouts/errors', :object => @lesson) %>
 
-  <div class = 'col-md-6 col-md-offset-3'>
     <form action="/lessons/<%= @lesson.id %>" method="post" class='form-horizontal'>
       <input name="_method" type="hidden" value="patch">
 
