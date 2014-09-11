@@ -1,20 +1,20 @@
-<h2>Edit this lesson:</h2>
+<div class="container-fluid">
+  <h2>Edit this lesson:</h2>
+  <%= render('layouts/errors', :object => @lesson) %>
 
-<%= render('layouts/errors', :object => @lesson) %>
+  <div class = 'col-md-6 col-md-offset-3'>
+    <form action="/lessons/<%= @lesson.id %>" method="post" class='form-horizontal'>
+      <input name="_method" type="hidden" value="patch">
 
-<div class = 'col-md-6 col-md-offset-3'>
-  <form action="/lessons/<%= @lesson.id %>" method="post" class='form-horizontal'>
-    <input name="_method" type="hidden" value="patch">
+      <%= render('lessons_form') %>
 
-    <%= render('lessons_form') %>
+    <button class = 'btn btn-primary'>Update Lesson</button>
 
-  <button class = 'btn btn-primary'>Update Lesson</button>
-
-    <a href='/lessons/<%= @lesson.id %>'
-        data-confirm="Are you sure?"
-        data-method="delete"
-        rel='nofollow'><button class='btn btn-danger'>Delete</button></a>
-  </form>
+      <a href='/lessons/<%= @lesson.id %>'
+          data-confirm="Are you sure?"
+          data-method="delete"
+          rel='nofollow'><button class='btn btn-danger'>Delete</button></a>
+    </form>
+  </div>
 </div>
-
 

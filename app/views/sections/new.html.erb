@@ -1,9 +1,10 @@
-<h2>Create a new section:</h2>
-<%= render('layouts/errors', :object => @section) %>
+<div class="container-fluid">
+  <h2>Create a new section:</h2>
+  <%= render('layouts/errors', :object => @section) %>
 
-<form action="/sections" method="post">
-  <%= render('sections_form') %>
-  <button class = 'btn btn-primary'>Create Section</button>
-</form>
-
+  <form action="/sections" method="post">
+    <%= render('sections_form') %>
+    <button class = 'btn btn-primary'>Create Section</button>
+  </form>
+</div>
 
