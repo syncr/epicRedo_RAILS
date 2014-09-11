@@ -9,7 +9,7 @@
       <textarea id="lesson_description" name="lesson[description]" type="text" value = "<%= @lesson.description %>"><%= @lesson.description %></textarea>
     </div>
 
-    <div class="control-group form-group">
+    <div class="control-group">
       <%if Lesson.all.any? %>
       <label for="lesson_section">Section:</label>
         <select name="lesson[section_id]" class = 'form-control' id="section">
